@@ -103,7 +103,7 @@ function Home() {
        </div>}
        
 
-      <div className="w-full lg:w-[50%] min-h-[200px] bg-[white] ">
+      <div className="w-full lg:w-[50%] min-h-[200px] bg-[white] flex flex-col gap-5 ">
         <div className="w-full h-[120px] bg-white shadow-lg rounded-lg  flex justify-center items-center gap-7">
           <div className="w-[50px] h-[50px] rounded-full overflow-hidden relative top-[5px] left-[30px]">
           <img src={userData.coverImage || dp } alt="Profile" className="w-full h-full object-cover" onClick={() => setEdit(true)} />
@@ -112,7 +112,7 @@ function Home() {
 
         </div>
          {postData.map((post,index)=>(
-              <Post key={index} id ={post._id} description={post.description} author={post.author} image ={post.image} like ={post.like} comment={post.comment}/>
+              <Post key={index} id ={post._id} description={post.description} author={post.author} image ={post.image} like ={post.like} comment={post.comment} createdAt={post.createdAt} />
          )
 
          )}
